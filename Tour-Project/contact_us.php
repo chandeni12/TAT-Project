@@ -4,7 +4,7 @@
  * Stores data in database AND sends email via Node.js service
  */
 
-// ✅ Enable MySQLi exceptions
+// ✅ Enable MySQLi exception
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
 // Database connection
