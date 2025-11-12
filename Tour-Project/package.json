@@ -1,0 +1,35 @@
+{
+  "name": "tour-travel-email-service",
+  "version": "1.0.0",
+  "description": "Email service for Tour & Travel contact form",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "start:bg": "nohup node server.js > email-service.log 2>&1 & echo $! > .email-service.pid && echo 'Email service started'",
+    "stop": "kill $(cat .email-service.pid 2>/dev/null) 2>/dev/null && rm .email-service.pid && echo 'Email service stopped' || echo 'No service running'",
+    "restart": "npm run stop && npm run start:bg",
+    "logs": "tail -f email-service.log",
+    "status": "lsof -ti:3000 && echo 'Email service is running' || echo 'Email service is not running'",
+    "test": "node test-email.js",
+    "test:email": "node test-email.js",
+    "test:health": "curl -s http://localhost:3000/health | python3 -m json.tool"
+  },
+  "keywords": [
+    "email",
+    "smtp",
+    "nodemailer"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemailer": "^6.9.7",
+    "cors": "^2.8.5",
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}

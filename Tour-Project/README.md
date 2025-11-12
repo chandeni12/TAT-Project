@@ -1,61 +1,55 @@
-# Tour-Project
-<b>Calling All Open Source Contributors: Join Us in Shaping the Future of this Repository! Try Making Some Changes!</b> <br>
-[Enhancement: Add A Section For Contributors on The Home Page ](https://github.com/Yash-srivastav16/Tour-Project/issues/10) <br>
-[Enhancement: Separate Pages For Popular Packages ](https://github.com/Yash-srivastav16/Tour-Project/issues/9) <br><br>
-DEMO-> https://yash-srivastav16.github.io/Tour-Project/
-Tour &amp; Travel Project (Using Html, Css, Php, Javascript).
+# Tour & Travel Website
 
-Here I used <b>Html, Css & javascript</b> To create the front end part of the website and for storing the Contact Information in the Database we used <b>php</b> as a backend language.
+A tour and travel booking website with contact form functionality.
 
-The HomePage of the Website is with<b> index.html</b> file.
+## Features
+- Tour packages display
+- Adventure activities showcase
+- Contact form with email notifications
+- Database storage for contact submissions
 
-## 🔧 Setup Instructions
+## Tech Stack
+- **Frontend**: HTML, CSS, JavaScript
+- **Backend**: PHP, Node.js
+- **Database**: MySQL
+- **Email**: Nodemailer (Gmail SMTP)
 
-### Prerequisites
-- XAMPP, WAMP, or any PHP server
-- MySQL database
-- phpMyAdmin (included with XAMPP/WAMP)
+## Setup
 
-### Installation Steps
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/Yash-srivastav16/Tour-Project.git
-   ```
+### 1. Install Dependencies
+```bash
+npm install
+```
 
-2. **Move the project to your server directory**
-   - For XAMPP: Move to `C:\xampp\htdocs\Tour-Project`
-   - For WAMP: Move to `C:\wamp64\www\Tour-Project`
+### 2. Database Setup
+- Start XAMPP/WAMP (Apache + MySQL)
+- Create database named `tour`
+- Create table:
+```sql
+CREATE TABLE contact (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(100) NOT NULL,
+    Email VARCHAR(100) NOT NULL,
+    Phone VARCHAR(20) NOT NULL,
+    Subject VARCHAR(200) NOT NULL,
+    Message TEXT NOT NULL
+);
+```
 
-3. **Set up the database**
-   - Start Apache and MySQL in XAMPP/WAMP
-   - Open phpMyAdmin (http://localhost/phpmyadmin)
-   - Create a database named `tourandtravel`
-   - Create a table named `contact` with the following structure:
-     ```sql
-     CREATE TABLE contact (
-         id INT AUTO_INCREMENT PRIMARY KEY,
-         name VARCHAR(100) NOT NULL,
-         email VARCHAR(100) NOT NULL,
-         phone VARCHAR(20) NOT NULL,
-         subject VARCHAR(200) NOT NULL,
-         message TEXT NOT NULL
-     );
-     ```
+### 3. Start Email Service
+```bash
+npm start
+```
 
-4. **Access the website**
-   - Open your browser and go to: `http://localhost/Tour-Project/`
-   - The contact form should now work properly!
+### 4. Access Website
+Open: `http://localhost/Tour-Project/`
 
-### ⚠️ Important Notes
-- **Do NOT use Live Server (VS Code)** for this project as it doesn't support PHP
-- You must use a PHP server like XAMPP or WAMP
-- Make sure MySQL is running when testing the contact form
+## How It Works
+1. User fills contact form
+2. PHP saves data to MySQL database
+3. PHP triggers Node.js email service
+4. Email sent to: teamhub.query@gmail.com
 
-![alt text](https://github.com/Yash-srivastav16/Tour-Project/blob/main/screenshot/home.PNG?raw=true)
+---
 
-<h1><b>Other Screenshots of the Pages are.</b></h1>
-
-![alt text](https://github.com/Yash-srivastav16/Tour-Project/blob/main/screenshot/adventure.PNG?raw=true)
-![alt text](https://github.com/Yash-srivastav16/Tour-Project/blob/main/screenshot/package1.PNG?raw=true)
-![alt text](https://github.com/Yash-srivastav16/Tour-Project/blob/main/screenshot/contact.PNG?raw=true)
-![alt text](https://github.com/Yash-srivastav16/Tour-Project/blob/main/screenshot/database_contact.PNG?raw=true)
+© 2025 Travel.com

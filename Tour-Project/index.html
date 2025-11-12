@@ -197,15 +197,14 @@
                 <form method="post" action="contact_us.php">
                     <div class="input-fields">
 
-                        <input type="text" class="input" placeholder="Name" name="name">
-                        <input type="email" class="input" placeholder="Email Address" name="email"
-                            pattern=".+@gmail\.com">
-                        <input type="phone" class="input" placeholder="Phone" name="phone">
-                        <input type="text" class="input" placeholder="Subject" name="subject">
+                        <input type="text" class="input" placeholder="Name" name="name" required>
+                        <input type="email" class="input" placeholder="Email Address" name="email" required>
+                        <input type="tel" class="input" placeholder="Phone" name="phone" required>
+                        <input type="text" class="input" placeholder="Subject" name="subject" required>
                     </div>
                     <div class="msg">
-                        <textarea placeholder="Message" name="message"></textarea> <br>
-                        <div class="btn1"><button type="submit">send <i class="uil uil-message"></i></div>
+                        <textarea placeholder="Message" name="message" required></textarea> <br>
+                        <div class="btn1"><button type="submit">send <i class="uil uil-message"></i></button></div>
                     </div>
                 </form>
             </div>
